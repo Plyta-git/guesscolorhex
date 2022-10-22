@@ -55,12 +55,18 @@ function App() {
 
   const handleClick = (e) => {
     setGuessedColor(e.target.value);
-    if (e.target.value == correctColor) {
+    if (e.target.value === correctColor) {
       setScore(score + 1);
       setNewColors();
-      console.log(`Well done, the answer is: %c#${correctColor}`, `color: #${correctColor}`);
+      console.log(
+        `Well done, the answer is: %c#${correctColor}`,
+        `color: #${correctColor}`
+      );
     } else {
-      console.log(`wrong, the correct answer is: %c#${correctColor}`, `color: #${correctColor}`);
+      console.log(
+        `wrong, the correct answer is: %c#${correctColor}`,
+        `color: #${correctColor}`
+      );
       setNewColors();
       setScore(0);
     }
