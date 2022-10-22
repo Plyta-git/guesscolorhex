@@ -68,8 +68,12 @@ function App() {
 
   const setNewColors = () => {
     let newColorSet = [];
-    colors.map((color) => {
-      newColorSet.push(Math.floor(Math.random() * (16777215 - 1048576 + 1) + 1048576).toString(16));
+    colors.map(() => {
+      newColorSet.push(
+        Math.floor(Math.random() * (16777215 - 1048576 + 1) + 1048576).toString(
+          16
+        )
+      );
     });
     setColors(newColorSet);
     setCorrectColor(newColorSet[Math.floor(Math.random() * 3)]);
